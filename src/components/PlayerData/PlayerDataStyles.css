@@ -1,0 +1,28 @@
+.player-data {
+    color: white;
+    width: 75%;
+    max-width: 1080px;
+    margin: 50px auto 0;
+}
+
+.player-data-top {
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: end;
+}
+
+.player-data-top .player-name .first {
+    font-family: 'Londrina Outline', cursive;
+    font-size: 48px;
+    margin-bottom: -20px;
+}
+
+.player-data-top .player-name .last {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 84px;
+}
+
+.player-data-top .player-image img {
+    width: 260px;
+}

@@ -37,7 +37,7 @@ const Header = () => {
                     <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
                     <input type="text" placeholder="Enter a Player..." value={player} onChange={handleChange} />
                 </div>
-                <SearchResults searchPlayers={searchPlayers} />
+                <SearchResults searchPlayers={searchPlayers} setPlayer={setPlayer} setSearchPlayers={setSearchPlayers} />
             </div>
         </div>
     </header>

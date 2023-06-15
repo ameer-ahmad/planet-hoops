@@ -3,14 +3,15 @@ import './SearchResultsStyles.css'
 import { useDispatch } from "react-redux"
 import { selectPlayer } from '../../redux/selectedPlayer'
 
-const SearchResults = ({ searchPlayers }) => {
+const SearchResults = ({ searchPlayers, setPlayer, setSearchPlayers }) => {
 
   const dispatch = useDispatch()
 
   const handleSelectPlayer = (e) => {
     const id = e.target.getAttribute('data-index')
     dispatch(selectPlayer(searchPlayers[id]))
-    console.log(searchPlayers[id])
+    setPlayer("")
+    setSearchPlayers([])
   }
 
   return (
