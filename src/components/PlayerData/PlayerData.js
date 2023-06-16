@@ -23,9 +23,17 @@ const PlayerData = () => {
     useEffect(() => {
         const getPlayerStats = async () => {
             if (Object.keys(player).length !== 0) {
-                const res = await Axios(`https://www.balldontlie.io/api/v1/season_averages?season=2022&player_ids[]=${player.id}`)
-                setPlayerStats(res.data.data[0])
+                try {
+                    const res = await Axios(`https://www.balldontlie.io/api/v1/season_averages?season=2022&player_ids[]=${player.id}`)
+                    setPlayerStats(res.data.data[0])
+                } catch(err) {
+                    if (err.response.status === 429) {
+                        alert("Slow down! You're sending too many requests to the server!")
+                    }
+                }
+                
             }
+            console.log(playerStats)
         }
 
         setPlayerName(`${player.first_name} ${player.last_name}`)
@@ -37,7 +45,7 @@ const PlayerData = () => {
             setIsFavourite(false)
         }
         
-    }, [player, players])
+    }, [player, players, playerStats])
 
     const toggleFavourite = () => {
         if (!isFavourite) {
@@ -53,7 +61,7 @@ const PlayerData = () => {
   return (
     <div className="player-data-container">
         <div className="player-data">
-            {Object.keys(player).length !== 0 ? (
+            {Object.keys(player).length !== 0 && playerStats ? (
             <div>
                 <div className='player-data-top'>
                     <div className="player-name">

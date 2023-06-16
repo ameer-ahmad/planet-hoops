@@ -11,9 +11,16 @@ const Header = () => {
 
     const handleSearch = async (player) => {
         if (player) {
-            const res = await Axios(`https://www.balldontlie.io/api/v1/players?search=${player}`)
-   
-            setSearchPlayers(res.data.data)
+            try {
+
+                const res = await Axios(`https://www.balldontlie.io/api/v1/players?search=${player}`)  
+                setSearchPlayers(res.data.data)
+
+            } catch (err) {
+                if (err.response.status === 429) {
+                    alert("Slow down! You're sending too many requests to the server!")
+                }
+            }
         } else {
             setSearchPlayers([])
         }
