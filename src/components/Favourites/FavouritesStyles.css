@@ -30,8 +30,10 @@
 .favourite-player .favourite-image {
     width:100px;
     margin-right: 25px;
+    pointer-events: none;
 }
 
 .favourite-player .favourite-name {
     font-size: 24px;
+    pointer-events: none;
 }
