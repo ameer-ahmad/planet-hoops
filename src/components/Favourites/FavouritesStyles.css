@@ -1,0 +1,37 @@
+.favourites-container {
+    width: 25%;
+    padding-left: 50px;
+    margin-top: 50px;
+}
+
+.favourites-container .title {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.heart-icon {
+    color: red;
+}
+
+
+
+.favourite-player {
+    display: flex;
+    align-items: end;
+    margin-bottom: 25px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.favourite-player:hover {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.favourite-player .favourite-image {
+    width:100px;
+    margin-right: 25px;
+}
+
+.favourite-player .favourite-name {
+    font-size: 24px;
+}

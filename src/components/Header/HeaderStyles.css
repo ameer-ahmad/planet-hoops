@@ -45,10 +45,19 @@ header {
     width: 100%;
     padding-left: 50px;
     font-size: 22px;
+    background-color: #303030;
+    color: white;
+}
+
+.header-container .search input::placeholder {
+    color: white;
+    opacity: 0.5;
 }
 
 .header-container .search .search-icon {
     position: relative;
     left: 30px;
     font-size: 18px;
+    color: white;
+    opacity: 0.5;
 }
