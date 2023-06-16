@@ -3,12 +3,15 @@ import "./PlayerDataStyles.css"
 import { useSelector } from "react-redux"
 import players from '../../data/players'
 import Axios from 'axios'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay, faHeart } from '@fortawesome/free-solid-svg-icons'
 
 const PlayerData = () => {
 
     const { player } = useSelector((state) => state.selectedPlayer)
     const [playerName, setPlayerName] = useState("")
     const [playerStats, setPlayerStats] = useState({})
+    const [isFavourite, setIsFavourite] = useState(false)
 
     useEffect(() => {
         const getPlayerStats = async () => {
@@ -22,6 +25,10 @@ const PlayerData = () => {
         getPlayerStats()
         
     }, [player])
+
+    const toggleFavourite = () => {
+        setIsFavourite(prevState => !prevState)
+    }
 
     
 
@@ -37,8 +44,11 @@ const PlayerData = () => {
                 </div>
                 <div className="player-image">
                     <img alt={playerName} src={`https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/520x380/${players[playerName]}.png`} />
+                    <FontAwesomeIcon className={isFavourite ? "favourite-heart fill" : "favourite-heart"} icon={faHeart} onClick={toggleFavourite} />
                 </div>
             </div>
+
+            <p className='team-name'>{player.team.full_name}</p>
 
             <div className='player-data-bottom'>
                 <div className='stats-col'>
@@ -98,6 +108,7 @@ const PlayerData = () => {
                     </div>
                 </div>
             </div>
+            <a href={`https://www.youtube.com/results?search_query=${player.first_name}+${player.last_name}+highlights`} target="_blank" className='highlights' rel='noreferrer'><FontAwesomeIcon icon={faPlay} /> &nbsp;Watch Highlights</a>
         </>
         ) : null}
     </div>

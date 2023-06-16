@@ -3,6 +3,8 @@
     width: 75%;
     max-width: 1080px;
     margin: 50px auto 0;
+    border-right: 1px solid white;
+    padding-right: 50px;
 }
 
 .player-data-top {
@@ -10,6 +12,7 @@
     display: flex;
     justify-content:space-between;
     align-items: end;
+    margin-bottom: 25px;
 }
 
 .player-data-top .player-name .first {
@@ -25,4 +28,46 @@
 
 .player-data-top .player-image img {
     width: 260px;
+    position: relative;
+}
+
+.player-data-bottom {
+    display: flex;
+    justify-content:space-between;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px;
+}
+
+.stat-label {
+    font-weight: 100;
+    font-size: 18px;
+    margin-bottom: -10px;
+    text-transform: uppercase;
+}
+
+.stat {
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.stats-col {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.team-name {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.favourite-heart {
+    position: absolute;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.favourite-heart.fill {
+    color: red;
 }
