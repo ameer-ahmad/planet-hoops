@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/planet-hoops/static/css/main.cf27247e.css",
+    "main.js": "/planet-hoops/static/js/main.5a44918f.js",
+    "index.html": "/planet-hoops/index.html",
+    "main.cf27247e.css.map": "/planet-hoops/static/css/main.cf27247e.css.map",
+    "main.5a44918f.js.map": "/planet-hoops/static/js/main.5a44918f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf27247e.css",
+    "static/js/main.5a44918f.js"
+  ]
+}
