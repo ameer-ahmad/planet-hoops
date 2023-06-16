@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/planet-hoops/static/css/main.cf27247e.css",
-    "main.js": "/planet-hoops/static/js/main.5c778e83.js",
+    "main.js": "/planet-hoops/static/js/main.39731616.js",
     "index.html": "/planet-hoops/index.html",
     "main.cf27247e.css.map": "/planet-hoops/static/css/main.cf27247e.css.map",
-    "main.5c778e83.js.map": "/planet-hoops/static/js/main.5c778e83.js.map"
+    "main.39731616.js.map": "/planet-hoops/static/js/main.39731616.js.map"
   },
   "entrypoints": [
     "static/css/main.cf27247e.css",
-    "static/js/main.5c778e83.js"
+    "static/js/main.39731616.js"
   ]
 }
