@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <header>
         <div className="header-container">
-            <div className="logo"><img alt="logo" src="./planet-hoops/logo.png"/></div>
+            <div className="logo"><img alt="logo" src="https://ameer-ahmad.github.io/planet-hoops/logo.png"/></div>
             
             <div className="search">
                 <div className="search-container">
