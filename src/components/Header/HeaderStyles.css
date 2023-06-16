@@ -61,3 +61,17 @@ header {
     color: white;
     opacity: 0.5;
 }
+
+@media only screen and (max-width: 500px) {
+
+    .header-container {
+        flex-direction: column;
+        height: 168px;
+        align-items: center;
+    }
+
+    .header-container .logo {
+        height: 50%;
+    }
+
+}

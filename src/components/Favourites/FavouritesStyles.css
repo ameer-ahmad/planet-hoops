@@ -37,3 +37,9 @@
     font-size: 24px;
     pointer-events: none;
 }
+
+@media only screen and (max-width: 950px) {
+    .favourites-container {
+        width: 100%;
+    }
+}

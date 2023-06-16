@@ -33,7 +33,6 @@ const PlayerData = () => {
                 }
                 
             }
-            console.log(playerStats)
         }
 
         setPlayerName(`${player.first_name} ${player.last_name}`)
@@ -53,6 +52,7 @@ const PlayerData = () => {
         } else {
             dispatch(removePlayer(player))
         }
+
         setIsFavourite(prevState => !prevState)
     }
 

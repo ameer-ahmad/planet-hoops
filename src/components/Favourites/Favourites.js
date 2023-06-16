@@ -1,4 +1,3 @@
-import React from 'react'
 import "./FavouritesStyles.css"
 import { useSelector } from "react-redux"
 import playersInfo from '../../data/players'

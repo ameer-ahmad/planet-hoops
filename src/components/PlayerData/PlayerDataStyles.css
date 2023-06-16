@@ -65,6 +65,7 @@
     flex-direction: column;
     height: 300px;
     justify-content: space-between;
+    width: 25%;
 }
 
 .team-name {
@@ -80,4 +81,39 @@
 
 .favourite-heart.fill {
     color: red;
+}
+
+@media only screen and (max-width: 950px) {
+    .player-data-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .player-data {
+        padding-right: 0;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding-bottom: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+    .player-data-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-col {
+        width: 50%;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .player-data-bottom {
+        flex-wrap: wrap;
+    }
+
 }
